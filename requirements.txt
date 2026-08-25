@@ -1,4 +1,3 @@
-# --extra-index-url must be first so pip finds CUDA wheels
 --extra-index-url https://download.pytorch.org/whl/cu121
 runpod==1.7.10
 torch==2.5.1
@@ -9,6 +8,4 @@ pillow==11.1.0
 requests
 safetensors
 huggingface_hub
-# NOTE: xformers intentionally omitted — handler has try/enable fallback.
-# Adding it bloats image, needs matching CUDA build, and was a top cause of "pulling fs layer" hell.
-# If you want it, pin exactly to your torch: xformers==0.0.29.post1 and set FROM to runpod/pytorch matching.
+numpy==1.26.4
